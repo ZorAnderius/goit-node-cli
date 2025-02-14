@@ -20,7 +20,6 @@ export async function listContacts() {
 }
 
 export async function getContactById(contactId) {
-  // ...твій код. Повертає об'єкт контакту з таким id. Повертає null, якщо контакт з таким id не знайдений.
   try {
     const data = await listContacts();
     if (data?.length === 0) return null;
@@ -32,7 +31,6 @@ export async function getContactById(contactId) {
 }
 
 export async function removeContact(contactId) {
-  // ...твій код. Повертає об'єкт видаленого контакту. Повертає null, якщо контакт з таким id не знайдений.
   try {
     const data = await listContacts();
     if (data?.length === 0) return null;
@@ -47,7 +45,6 @@ export async function removeContact(contactId) {
 }
 
 export async function addContact(name, email, phone) {
-  // ...твій код. Повертає об'єкт доданого контакту (з id).
   try {
     const data = await listContacts();
     const newContact = { id: uuidv4(), name, email, phone };
